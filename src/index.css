@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-cyber: "Chakra Petch", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #050510;
+  color: #f1f5f9;
+}
+
+.font-cyber {
+  font-family: var(--font-cyber);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom Glassmorphism */
+.glass-panel {
+  background: rgba(12, 12, 28, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(155, 92, 255, 0.18);
+}
+
+.glass-panel-cyan {
+  background: rgba(8, 18, 32, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 217, 255, 0.22);
+}
+
+.glass-panel-glow {
+  box-shadow: 0 0 25px -5px rgba(155, 92, 255, 0.15), 0 0 10px -2px rgba(0, 217, 255, 0.1);
+}
+
+/* Cyber scanline overlay for futuristic video HUD */
+.cyber-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 38, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070714;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(155, 92, 255, 0.35);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(155, 92, 255, 0.6);
+}

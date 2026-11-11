@@ -1,0 +1,6 @@
+{
+  "name": "HANDCONNECT",
+  "description": "Real-time AI Hand Tracking & Gesture Recognition System featuring glowing neon skeletons, rainbow fingertip connection beams, and live cyber analytics.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
